@@ -1,0 +1,37 @@
+<div class="row card-order px-2 shadow ">
+    <!-- Numero do pedido -->
+    <div class="col-12 mt-2 mb-2">
+        <span class="texto-negrito">Pedido #{{order.id}}</span>
+    </div>
+    <!-- Produtos -->
+    <div class="row mb-2" *ngFor="let product of order.orderProduct">
+        <div class="col-3">
+            <img class="image-card" src="../../../assets/image/velas-de-spa.png" alt="produto">
+        </div>
+        <div class="col-9">
+            <span class="texto">{{product.product.nome}}</span>
+            <br>
+            <span class="texto-descricao">{{product.product.descricao}}</span>
+            <div class=" mt-3 d-flex justify-content-between">
+                <span class="texto">R${{product.product.preco}}</span>
+                <span class="texto">Qtda:{{product.quantidade}}</span>
+            </div>
+        </div>
+    </div>
+    <hr class="m-3">
+
+    <!-- valor total -->
+    <div class="row mb-2">
+        <div class="col-6">
+            <span class="texto-descricao">Valor tatal: R${{order.valor_total}}</span>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <button mat-mini-fab class="mat-warn mx-1" aria-label="botao cancelar">
+                <mat-icon>close</mat-icon>
+            </button>
+            <button mat-mini-fab class="mat-success" aria-label="botao confirmar">
+                <mat-icon>done</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+@import url(../../../styles.scss);
+
+.card-order{
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    border: 1px #8A8A8A solid;
+    background-color: white;
+}
+
+.image-card{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.divisoria{
+    width: 100%;
+    height: 2px;
+    color: #797B7E;
+}
+
+:host ::ng-deep .mat-success{
+    background-color:green;
+}
+
+:host ::ng-deep .mat-warn{
+    background-color:red;
+} 
